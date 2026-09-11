@@ -25,7 +25,7 @@ Welcome to my research hub. My work studies how institutions, information, and m
 ## Explore the resources
 
 - **[Research guide](research/README.md)** — programme structure and paper discovery.
-- **[Repository directory](REPOSITORIES.md)** — existing tools and supporting utilities, grouped by purpose.
+- **[Repository directory](REPOSITORIES.md)** — selected research tools and workflow resources.
 - **[Replication guide](REPRODUCIBILITY.md)** — documentation and release conventions for research materials.
 - **[Maintenance record](MAINTENANCE.md)** — scope, update rules, and the initial inventory.
 

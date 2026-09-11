@@ -17,7 +17,7 @@ Maintain this research hub and its links to Fuli Yang's academic homepage, GARCH
 
 Do not infer publication status from submission activity or working-paper availability. Keep editorial correspondence and private research materials out of public documentation.
 
-Repository deletion, visibility changes, collaborator changes, licensing decisions, and release of previously private research materials require explicit instructions. Routine research navigation does not require rerunning empirical analyses.
+The owner has authorized repository naming and cleanup of obsolete or unrelated projects. Preserve identified local research contributions during cleanup and record the evidence and operation. Changes to visibility, collaborators, licensing, or release of previously private materials require their own explicit instructions. Routine research navigation does not require rerunning empirical analyses.
 
 ## Initial review — September 11, 2026
 
@@ -41,3 +41,7 @@ Use https://fuliyang.io/ as the account website. Pin this research hub first, th
 Suggested garch-quant repository description:
 
 > Fuli Yang's research hub: IMD, DRP, financial econometrics, macro-finance, climate risk and market design.
+
+## Cleanup and naming decisions
+
+See the [repository audit](maintenance/REPOSITORY_AUDIT.md) and [account structure](maintenance/ACCOUNT_STRUCTURE.md). Only the selected research resources are shown in the active directory; the audit records deferred administration operations.
