@@ -6,8 +6,8 @@
 
 | Repository | Role | Status |
 | :--- | :--- | :--- |
-| DrFuliyang | GitHub profile README | Creation pending; [content prepared](../profile/README.md) |
-| research | Main research hub | Content published under the existing name garch-quant; rename pending |
+| DrFuliyang | GitHub profile README | Active; profile README published |
+| research | Main research hub | Active; renamed from garch-quant with history retained |
 | imd | Institutional Market Dynamics releases | Reserved for a substantive release |
 | drp | Distributional Regime Persistence releases | Reserved for a substantive release |
 | crypto-roughness | Crypto roughness replication materials | Reserved for a substantive release |
@@ -30,9 +30,10 @@ Website: https://fuliyang.io/
 
 Display IMD and DRP first in the research hub, followed by empirical research fields. Pin the hub and then substantive paper-specific releases as they become available.
 
-## Applying the two initial account changes
+## Initial account changes completed
 
-1. Rename garch-quant to research in its repository Settings, then update the direct repository URLs in retained documentation. Current links deliberately use the existing name until the rename is confirmed.
-2. Create the public same-name repository DrFuliyang with a README, then replace it with the prepared profile content.
+1. garch-quant was renamed to research; repository history and identity were retained.
+2. The public same-name profile repository was created and its README was published.
+3. Direct repository links were synchronized to the research name.
 
-The owner has authorized naming and cleanup. These steps are pending because this connector exposes file changes but not repository creation or repository administration.
+The account now has a live profile README and a separate research hub.

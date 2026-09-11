@@ -21,7 +21,7 @@ The owner has authorized repository naming and cleanup of obsolete or unrelated 
 
 ## Initial review — September 11, 2026
 
-- Initialized garch-quant as the research navigation hub.
+- Initialized the research navigation hub under garch-quant; it has since been renamed research.
 - Grouped 17 public repositories into four resource categories and recorded upstream provenance for 11 forks.
 - Excluded the five retired website repositories deleted by the owner.
 - Matched the five IMD paper links to the IMD website.
@@ -30,7 +30,7 @@ The owner has authorized repository naming and cleanup of obsolete or unrelated 
 
 ## Account presentation follow-up
 
-The same-name profile repository DrFuliyang/DrFuliyang was not found during the initial review. The proposed content is in [profile/README.md](profile/README.md); it is a draft for that repository, not an active profile README.
+The same-name profile repository is active at [DrFuliyang/Drfuliyang](https://github.com/DrFuliyang/Drfuliyang), and its README has been published.
 
 Suggested account bio:
 
@@ -38,7 +38,7 @@ Suggested account bio:
 
 Use https://fuliyang.io/ as the account website. Pin this research hub first, then prioritize released research packages. Repository metadata and profile pinning require account settings capabilities outside the file-editing tools used for this update.
 
-Suggested garch-quant repository description:
+Suggested research repository description:
 
 > Fuli Yang's research hub: IMD, DRP, financial econometrics, macro-finance, climate risk and market design.
 

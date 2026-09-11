@@ -8,7 +8,7 @@ The owner authorized account reorganization, repository naming, and cleanup of o
 
 | Repository | Decision | Evidence |
 | :--- | :--- | :--- |
-| garch-quant | Retain; rename to research when repository administration is available | Active research hub published in this maintenance pass |
+| research | Retain as the main research hub | Renamed from garch-quant; active research hub published and verified |
 | Auto-claude-code-research-in-sleep | Retain local research additions | Default branch has 11 commits not in the upstream default branch; comparison lists seven research skill files |
 | scientific-agent-skills | Retain as a supporting resource | Broad skill collection; corrected startup instructions that referenced absent files |
 | garch-quant-skill | Retain as a prototype | Python implementation present; README now documents source and validation scope |
@@ -51,7 +51,7 @@ These paths are preserved in their existing repository. No migration or skill-co
 
 ## Completed changes
 
-- Created the research hub, research guide, replication guide, maintenance record, and profile draft.
+- Created the research hub, research guide, replication guide, maintenance record, and live profile README.
 - Corrected scientific-agent-skills navigation to match the actual tree.
 - Corrected the pairs-trading raw download URL and clarified its specification status.
 - Rewrote the garch-quant-skill README around the actual source interface and preserved its existing MIT designation.
@@ -59,6 +59,6 @@ These paths are preserved in their existing repository. No migration or skill-co
 
 ## Administration status
 
-Repository creation, renaming, archiving, and deletion are not exposed by the connector used for this work. This pass did not perform any of those operations.
+The owner completed repository creation and renaming in GitHub. The connector verified the active research and profile repositories and synchronized their documentation. Archiving and deletion remain outside this connector.
 
 The owner previously deleted GARCHSigma.github.io, sigma.garch.space, bayes.garch.space, copula.garch.space, and macro.garch.space. Their repository endpoints subsequently returned 404.
