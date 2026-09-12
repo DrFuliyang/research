@@ -57,6 +57,13 @@ These paths are preserved in their existing repository. No migration or skill-co
 - Rewrote the garch-quant-skill README around the actual source interface and preserved its existing MIT designation.
 - Removed general utility forks from the main research navigation.
 
+## Follow-up review — September 12, 2026
+
+- Verified that the public repository count remains 17 and that `research` and `Drfuliyang` still use `main`.
+- Corrected the selected-resource link for `garch-quant-skill`; no cleanup candidate was deleted or archived.
+- ARIS's Actions history still exposes two failed runs of a former upstream-sync workflow. The workflow file is absent from current `main`, so no automated repair or synchronization was attempted. Its 11 unique commits and seven listed skill files remain protected.
+- No new evidence changes the decision to keep `translate-book` pending a separate provenance review.
+
 ## Administration status
 
 The owner completed repository creation and renaming in GitHub. The connector verified the active research and profile repositories and synchronized their documentation. Archiving and deletion remain outside this connector.

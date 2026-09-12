@@ -38,10 +38,19 @@ Suggested account bio:
 
 Use https://fuliyang.io/ as the account website. Pin this research hub first, then prioritize released research packages. Repository metadata and profile pinning require account settings capabilities outside the file-editing tools used for this update.
 
-Suggested research repository description:
+Current research repository description (verified September 12, 2026):
 
-> Fuli Yang's research hub: IMD, DRP, financial econometrics, macro-finance, climate risk and market design.
+> Dr Fuli Yang’s research hub — Institutional Market Dynamics (IMD), Distributional Regime Persistence (DRP), financial econometrics, macro-finance, climate risk, and market design.
 
 ## Cleanup and naming decisions
 
 See the [repository audit](maintenance/REPOSITORY_AUDIT.md) and [account structure](maintenance/ACCOUNT_STRUCTURE.md). Only the selected research resources are shown in the active directory; the audit records deferred administration operations.
+
+## Review — September 12, 2026
+
+- Confirmed that [research](https://github.com/DrFuliyang/research) and [Drfuliyang](https://github.com/DrFuliyang/Drfuliyang) use `main` as their default branch; the public account inventory remains 17 repositories.
+- Corrected a repository-rename regression in `REPOSITORIES.md`: the hub label now reads `research`, and `garch-quant-skill` again points to its existing repository instead of the nonexistent `research-skill`.
+- Rechecked the five public IMD paper titles and SSRN identifiers against the IMD programme page. Direct SSRN page retrieval was blocked during this review, so the maintenance process does not claim a fresh SSRN version or file-level verification.
+- Checked Actions history for the hub, profile, and selected resources. The only failures returned were two May–June 2026 runs of ARIS's former `sync-skills-from-upstream.yml`; that workflow is absent from the current default branch, which contains `lint-skills-helpers.yml`. No workflow was rerun.
+- Automated retrieval produced usable content for the IMD site and the GARCH Institute endpoint, but not for `fuliyang.io` or the DRP endpoint. Those links remain because a crawler failure is not evidence that a site is unavailable.
+- No repository was deleted, archived, renamed, or made private. The ARIS unique-commit and seven-skill preservation rule, and the separate provenance treatment for `translate-book`, remain unchanged.

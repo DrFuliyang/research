@@ -8,10 +8,10 @@ The main research identity is organized around IMD, DRP, and the empirical field
 
 | Repository | Role | Current scope |
 | :--- | :--- | :--- |
-| [garch-quant](https://github.com/DrFuliyang/research) | Research hub | Programme navigation, papers, and release conventions |
+| [research](https://github.com/DrFuliyang/research) | Research hub | Programme navigation, papers, and release conventions |
 | [Auto-claude-code-research-in-sleep](https://github.com/DrFuliyang/Auto-claude-code-research-in-sleep) | Research workflows | Fork with local additions for GARCH, macro-finance, ESG, and related research |
 | [scientific-agent-skills](https://github.com/DrFuliyang/scientific-agent-skills) | Supporting skill collection | Scientific references and skills; selected research navigation added |
-| [garch-quant-skill](https://github.com/DrFuliyang/research-skill) | Modelling prototype | EGARCH/LSTM source; empirical validation remains a separate task |
+| [garch-quant-skill](https://github.com/DrFuliyang/garch-quant-skill) | Modelling prototype | EGARCH/LSTM source; empirical validation remains a separate task |
 | [pairs-trading](https://github.com/DrFuliyang/pairs-trading) | Workflow specification | README and skill specification; standalone backtest implementation not included |
 
 ## Paper-specific packages
