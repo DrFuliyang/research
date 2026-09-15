@@ -26,7 +26,12 @@ DRP develops geometric measures of persistence, change, and stress in financial 
 | Real-time regime monitoring | Sequential distributional change and stress detection |
 | Scale, shape, location, and speed | Decomposition of distributional movements |
 | Variance memory and distributional memory | Distinct persistence objects and their empirical relationship |
-| Later DRP work | Portability, calibration, and estimator behaviour across markets |
+| Adaptive complexity and prototype identity | When a two-prototype representation is too compressed, and how many prototypes the geometry supports |
+
+### Latest public paper
+
+**DRP8 — [Beyond Two Barycenters: Adaptive Complexity in Distributional Regime Geometry](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7451619)**  
+SSRN 7451619. DRP8 remains at the measurement layer: it studies prototype complexity, identity stability, and the sufficiency of the two-anchor representation rather than making a new forecasting claim.
 
 [DRP programme website](https://drp.garch.institute/) · [Paper catalogue](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11814228)
 

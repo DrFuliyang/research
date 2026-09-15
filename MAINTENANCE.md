@@ -54,3 +54,9 @@ See the [repository audit](maintenance/REPOSITORY_AUDIT.md) and [account structu
 - Checked Actions history for the hub, profile, and selected resources. The only failures returned were two May–June 2026 runs of ARIS's former `sync-skills-from-upstream.yml`; that workflow is absent from the current default branch, which contains `lint-skills-helpers.yml`. No workflow was rerun.
 - Automated retrieval produced usable content for the IMD site and the GARCH Institute endpoint, but not for `fuliyang.io` or the DRP endpoint. Those links remain because a crawler failure is not evidence that a site is unavailable.
 - No repository was deleted, archived, renamed, or made private. The ARIS unique-commit and seven-skill preservation rule, and the separate provenance treatment for `translate-book`, remain unchanged.
+
+## DRP synchronization — September 15, 2026
+
+- Added the public DRP8 record to the research guide: *Beyond Two Barycenters: Adaptive Complexity in Distributional Regime Geometry*, SSRN 7451619.
+- Recorded DRP8 within the measurement and estimator-contribution boundary: prototype complexity, identity stability, and the sufficiency of a two-anchor representation. No journal-submission status, private materials, or unverified empirical claims were published.
+- Synchronized the GitHub navigation with the owner-confirmed DRP programme-page update. Automated retrieval still did not return usable DRP page content, so no page-build or deployment claim was inferred from the crawler result.
