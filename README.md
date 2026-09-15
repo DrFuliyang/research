@@ -12,6 +12,11 @@ Welcome to my research hub. My work studies how institutions, information, and m
 | **Institutional Market Dynamics (IMD)** | How do shared constraints synchronize institutions and reshape market covariance? | [Programme website](https://imd.garch.institute/) · [Research guide](research/README.md#institutional-market-dynamics) |
 | **Distributional Regime Persistence (DRP)** | How does distributional geometry reveal market memory, persistence, and stress? | [Programme website](https://drp.garch.institute/) · [Research guide](research/README.md#distributional-regime-persistence) |
 
+### Latest DRP release
+
+**DRP8 — [Beyond Two Barycenters: Adaptive Complexity in Distributional Regime Geometry](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7451619)** · SSRN 7451619  
+Adaptive prototype complexity, identity stability, and the sufficiency of the two-anchor representation.
+
 ## Empirical research
 
 | Field | Selected themes |
