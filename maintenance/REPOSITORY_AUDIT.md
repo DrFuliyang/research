@@ -14,7 +14,7 @@ The owner authorized account reorganization, repository naming, and cleanup of o
 | garch-quant-skill | Retain as a prototype | Python implementation present; README now documents source and validation scope |
 | pairs-trading | Retain as a workflow specification | README and SKILL.md present; corrected old account URL |
 | translate-book | Retain pending a separate provenance review | GitHub reports no common ancestor with the upstream default branch; uniqueness cannot be inferred |
-| riskfolio-risk-parity | Retire empty placeholder | Empty at initial inventory |
+| riskfolio-risk-parity | Retire non-substantive placeholder | Current `main` contains only `.gitignore`; one branch and no releases or issues were returned in the September 19 review |
 | zoro-cli | Retire from research presentation | Small general command-line utility with no documented role in the research programmes |
 
 ## Fork cleanup candidates
@@ -25,7 +25,7 @@ Default-branch comparisons are against the upstream default branch. A zero ahead
 | :--- | :--- | ---: | ---: | :--- |
 | [pdf-craft](https://github.com/DrFuliyang/pdf-craft) | [oomol-lab/pdf-craft](https://github.com/oomol-lab/pdf-craft) | 0 | 83 | Single branch listed |
 | [financial-services](https://github.com/DrFuliyang/financial-services) | [anthropics/financial-services](https://github.com/anthropics/financial-services) | 0 | 13 | 32 branches listed; additional branches not compared |
-| [wechat-article-exporter](https://github.com/DrFuliyang/wechat-article-exporter) | [wechat-article/wechat-article-exporter](https://github.com/wechat-article/wechat-article-exporter) | 0 | 35 | 4 branches listed; additional branches not compared |
+| wechat-article-exporter *(local endpoint absent)* | [wechat-article/wechat-article-exporter](https://github.com/wechat-article/wechat-article-exporter) | 0 | 35 | Historical comparison retained; the local endpoint returned 404 and is absent from the September 19 account inventory |
 | [wxdown-service-obsolete](https://github.com/DrFuliyang/wxdown-service-obsolete) | [wechat-article/wxdown-service-obsolete](https://github.com/wechat-article/wxdown-service-obsolete) | 0 | 0 | Single branch listed |
 | [wxdown-service](https://github.com/DrFuliyang/wxdown-service) | [wechat-article/wxdown-service](https://github.com/wechat-article/wxdown-service) | 0 | 0 | Single branch listed |
 | [docs](https://github.com/DrFuliyang/docs) | [wechat-article/docs](https://github.com/wechat-article/docs) | 0 | 3 | Single branch listed |
@@ -33,7 +33,7 @@ Default-branch comparisons are against the upstream default branch. A zero ahead
 | [lumibot](https://github.com/DrFuliyang/lumibot) | [Lumiwealth/lumibot](https://github.com/Lumiwealth/lumibot) | 0 | 582 | At least 100 branches; listing paginated |
 | [TradingAgents](https://github.com/DrFuliyang/TradingAgents) | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 0 | 100 | 2 branches listed; additional branches not compared |
 
-All nine have been excluded from the selected research resources. Prefer archiving these candidates first if they are no longer needed. Repository deletion should follow a final check for unique branches, tags, releases, and local issues. The upstream of wxdown-service-obsolete is itself archived.
+All nine historical candidates have been excluded from the selected research resources; eight remain visible in the current account inventory, while `wechat-article-exporter` is absent. Prefer archiving the remaining candidates first if they are no longer needed. Repository deletion should follow a final check for unique branches, tags, releases, and local issues. The upstream of wxdown-service-obsolete is itself archived.
 
 ## Preserved research additions
 
@@ -63,6 +63,13 @@ These paths are preserved in their existing repository. No migration or skill-co
 - Corrected the selected-resource link for `garch-quant-skill`; no cleanup candidate was deleted or archived.
 - ARIS's Actions history still exposes two failed runs of a former upstream-sync workflow. The workflow file is absent from current `main`, so no automated repair or synchronization was attempted. Its 11 unique commits and seven listed skill files remain protected.
 - No new evidence changes the decision to keep `translate-book` pending a separate provenance review.
+
+## Follow-up review — September 19, 2026
+
+- Confirmed 17 visible repositories. `research` and `Drfuliyang` remain public and use `main`; no newly failed Actions runs were returned after the previous review.
+- Removed the dead local link for `wechat-article-exporter`. Its endpoint returns 404 and it is absent from the current inventory; the historical upstream comparison remains for provenance, without attributing how or when the local repository disappeared.
+- Rechecked `riskfolio-risk-parity`: `main` contains only `.gitignore`, with one visible branch and no returned releases or issues. It remains a cleanup candidate, but no deletion or archive operation was performed.
+- The ARIS preservation requirement remains unchanged: retain the 11 identified unique commits and seven listed research skill files. `translate-book` remains outside redundancy-based cleanup because its upstream comparison previously had no common ancestor.
 
 ## Administration status
 

@@ -60,3 +60,12 @@ See the [repository audit](maintenance/REPOSITORY_AUDIT.md) and [account structu
 - Added the public DRP8 record to the research guide: *Beyond Two Barycenters: Adaptive Complexity in Distributional Regime Geometry*, SSRN 7451619.
 - Recorded DRP8 within the measurement and estimator-contribution boundary: prototype complexity, identity stability, and the sufficiency of a two-anchor representation. No journal-submission status, private materials, or unverified empirical claims were published.
 - Synchronized the GitHub navigation with the owner-confirmed DRP programme-page update. Automated retrieval still did not return usable DRP page content, so no page-build or deployment claim was inferred from the crawler result.
+
+## Review — September 19, 2026
+
+- Confirmed 17 visible repositories. [research](https://github.com/DrFuliyang/research) and [Drfuliyang](https://github.com/DrFuliyang/Drfuliyang) remain public and use `main`; the latest hub change is the public DRP8 homepage entry.
+- Checked all seven Markdown files in the hub: no missing relative-link targets were found. The profile, programme navigation, DRP8 SSRN 7451619 entry, selected-resource links, and repository labels remain internally consistent.
+- Rechecked the five IMD paper identifiers against the public IMD programme page. No new version claim was added. The GARCH Institute endpoint responded, while automated retrieval still produced no usable content for `fuliyang.io` or the DRP page; those crawler results were not treated as evidence of failure.
+- Checked Actions history across all 17 visible repositories. No failed run dated after September 12 was returned. ARIS's two historical failures belong to the removed upstream-sync workflow and remain documented without rerunning it.
+- Updated the repository audit because `wechat-article-exporter` now returns 404 and is absent from the account inventory. Also clarified that `riskfolio-risk-parity` is non-substantive rather than literally empty: its current tree contains only `.gitignore`.
+- Reviewed `maintenance/ACCOUNT_STRUCTURE.md`; no structural change was required. No repository was deleted, archived, renamed, made private, or otherwise administratively changed.
