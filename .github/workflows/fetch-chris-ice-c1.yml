@@ -1,36 +1,10 @@
-name: Fetch public CHRIS ICE C1
+name: DISABLED temporary workflow — fetch-chris-ice-c1.yml
 
 on:
-  push:
-    branches:
-      - data-fetch-20260926
-    paths:
-      - ".github/workflows/fetch-chris-ice-c1.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  fetch:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - name: Fetch unauthenticated public continuous EUA futures
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p out
-          URL="https://data.nasdaq.com/api/v3/datasets/CHRIS/ICE_C1.csv?start_date=2026-01-01&end_date=2026-06-30&order=asc"
-          code=$(curl -L -sS -A "Mozilla/5.0 research-replication/2026-09-26" -w "%{http_code}" "$URL" -o out/ICE_C1.csv)
-          echo "$code" > out/http_status.txt
-          echo "$URL" > out/source_url.txt
-          wc -c out/ICE_C1.csv
-          head -5 out/ICE_C1.csv || true
-          test "$code" = "200"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: chris-ice-c1-20260926
-          path: out/
-          retention-days: 30
+      - run: echo "This temporary research workflow is disabled. Do not run."
