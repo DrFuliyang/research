@@ -79,3 +79,10 @@ See the [repository audit](maintenance/REPOSITORY_AUDIT.md) and [account structu
 - The GARCH Institute endpoint returned a page, but the automated reader again obtained no usable body text from `fuliyang.io`, the IMD endpoint, or the DRP endpoint. Existing owner-specified links were retained; retrieval limitations were not treated as website failure.
 - Actions history across all 17 repositories contains no new failed run. ARIS still has only the two historical failures of the removed sync workflow; its comparison remains 11 commits ahead of upstream, and all seven protected research skill files remain present.
 - Reviewed `maintenance/REPOSITORY_AUDIT.md` and `maintenance/ACCOUNT_STRUCTURE.md`. No repository was deleted, archived, renamed, made private, or changed administratively.
+
+## Navigation correction — September 26, 2026
+
+- Added two omitted public records after checking SSRN: *Japan's Fiscal Duration: A Measurement Architecture for Contractual Refinancing Exposure and the BOJ Balance Sheet* (7494820), and *From Gatekeeping to Accountability: Institutional Tension in Hong Kong's 2026 Spin-off Reform* (7509761).
+- Moved the oil-price / Treasury term-premium paper (7497760) out of the Japan section into Energy and US macro-finance. The earlier placement was a classification error.
+- Added DRP5's current author-verified title and direct SSRN 7375598 link to the DRP guide, retaining its conditional forecasting and calibration boundaries. This is a GitHub documentation update, not a claim that the programme website or SSRN metadata was edited.
+- Follow-up retrieval returned IMD page text and DRP page text at https://drp.fuliyang.io/; the academic homepage was visible in search results, but direct extraction still returned no body text. Index availability is distinct from live-page verification. The indexed DRP5 programme title still differed from the author-verified title.
