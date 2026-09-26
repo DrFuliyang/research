@@ -1,0 +1,42 @@
+name: Test EEX EUA widget with page session
+
+on:
+  push:
+    branches:
+      - data-fetch-20260926
+    paths:
+      - ".github/workflows/test-eex-widget-session.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test browser-like session
+        shell: bash
+        run: |
+          set -u
+          mkdir -p out
+          PAGE="https://www.eex.com/de/customised-solutions/bew"
+          WIDGET="https://eds.eex-group.com/widgets/pub/3883088a-f3d2-4291-b802-4f5c56d9a057/metadata.html"
+          curl -L -sS -c out/cookies.txt -A "Mozilla/5.0" "$PAGE" -o out/page.html
+          for n in 1 2 3; do
+            case "$n" in
+              1) extra=(-e "$PAGE");;
+              2) extra=(-e "$PAGE" -H "Origin: https://www.eex.com" -H "Accept: text/html,application/xhtml+xml,*/*");;
+              3) extra=(-e "$PAGE" -b out/cookies.txt -H "Sec-Fetch-Site: cross-site" -H "Sec-Fetch-Mode: cors");;
+            esac
+            code=$(curl -L -sS -A "Mozilla/5.0" "${extra[@]}" -w "%{http_code}" "$WIDGET" -o "out/widget_$n.html")
+            echo "$n $code $(wc -c < out/widget_$n.html)" >> out/status.txt
+          done
+          cat out/status.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eex-widget-session-test
+          path: out/
+          retention-days: 30
