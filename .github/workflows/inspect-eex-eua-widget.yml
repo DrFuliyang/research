@@ -1,64 +1,10 @@
-name: Inspect EEX EUA widget backend
+name: DISABLED temporary workflow — inspect-eex-eua-widget.yml
 
 on:
-  push:
-    branches:
-      - data-fetch-20260926
-    paths:
-      - ".github/workflows/inspect-eex-eua-widget.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  inspect:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: python -m pip install --quiet requests
-      - name: Fetch widget metadata and assets
-        shell: python
-        run: |
-          from pathlib import Path
-          import re, urllib.parse, requests, json
-          out=Path("out"); assets=out/"assets"; assets.mkdir(parents=True,exist_ok=True)
-          base="https://eds.eex-group.com/widgets/pub/3883088a-f3d2-4291-b802-4f5c56d9a057/"
-          s=requests.Session(); s.headers["User-Agent"]="Mozilla/5.0 research-replication/2026-09-26"
-          r=s.get(urllib.parse.urljoin(base,"metadata.html"),timeout=30); r.raise_for_status()
-          html=r.text
-          (out/"metadata.html").write_text(html,encoding="utf-8")
-          refs=re.findall(r'(?:src|href)=["\\\']([^"\\\']+)["\\\']',html,re.I)
-          saved=[]
-          for i,ref in enumerate(refs):
-              if not any(ext in ref.lower() for ext in [".js",".json",".css"]):
-                  continue
-              u=urllib.parse.urljoin(base,ref)
-              try:
-                  rr=s.get(u,timeout=30); rr.raise_for_status()
-                  ext=".js" if ".js" in ref.lower() else (".json" if ".json" in ref.lower() else ".css")
-                  p=assets/f"asset_{i}{ext}"; p.write_bytes(rr.content)
-                  saved.append({"url":u,"path":str(p),"bytes":len(rr.content)})
-              except Exception as e:
-                  saved.append({"url":u,"error":str(e)})
-          (out/"assets.json").write_text(json.dumps(saved,indent=2),encoding="utf-8")
-          needles=re.compile(r'https?://|api|json|csv|ajax|fetch|FEUA|series|endpoint|download|histor|data',re.I)
-          rel=[]
-          for p in [out/"metadata.html"]+list(assets.glob("*")):
-              try: txt=p.read_text(errors="ignore")
-              except: continue
-              for ln,line in enumerate(txt.splitlines(),1):
-                  if needles.search(line):
-                      rel.append(f"{p}:{ln}:{line[:2000]}")
-          (out/"relevant.txt").write_text("\n".join(rel),encoding="utf-8")
-          print("metadata bytes",len(html.encode()))
-          print("\n".join(rel[:200]))
-      - uses: actions/upload-artifact@v4
-        with:
-          name: eex-eua-widget-inspection-20260926-v2
-          path: out/
-          retention-days: 30
+      - run: echo "This temporary research workflow is disabled. Do not run."
