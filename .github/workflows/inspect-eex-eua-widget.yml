@@ -1,0 +1,59 @@
+name: Inspect EEX EUA widget backend
+
+on:
+  push:
+    branches:
+      - data-fetch-20260926
+    paths:
+      - ".github/workflows/inspect-eex-eua-widget.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch widget metadata and assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out/assets
+          BASE="https://eds.eex-group.com/widgets/pub/3883088a-f3d2-4291-b802-4f5c56d9a057"
+          curl -L -sS --retry 3 --retry-all-errors -A "Mozilla/5.0" "$BASE/metadata.html" -o out/metadata.html
+          grep -Eoi 'src=["'\''"'"'][^"'\''"'"']+|href=["'\''"'"'][^"'\''"'"']+|https?://[^"<> ]+' out/metadata.html > out/asset_refs.txt || true
+          grep -Ein 'api|json|csv|ajax|fetch|url|data|series|FEUA|price|download|endpoint' out/metadata.html > out/metadata_relevant.txt || true
+          python - <<'PY'
+          from pathlib import Path
+          import re, urllib.parse, requests, json
+          base="https://eds.eex-group.com/widgets/pub/3883088a-f3d2-4291-b802-4f5c56d9a057/"
+          html=Path("out/metadata.html").read_text(errors="ignore")
+          refs=re.findall(r'''(?:src|href)=["']([^"']+)["']''',html,re.I)
+          s=requests.Session(); s.headers["User-Agent"]="Mozilla/5.0"
+          saved=[]
+          for i,ref in enumerate(refs):
+              if not (".js" in ref or ".json" in ref or ".css" in ref):
+                  continue
+              u=urllib.parse.urljoin(base,ref)
+              try:
+                  r=s.get(u,timeout=30); r.raise_for_status()
+                  ext=".js" if ".js" in ref else (".json" if ".json" in ref else ".css")
+                  p=Path("out/assets")/f"asset_{i}{ext}"
+                  p.write_bytes(r.content)
+                  saved.append({"url":u,"path":str(p),"bytes":len(r.content)})
+              except Exception as e:
+                  saved.append({"url":u,"error":str(e)})
+          Path("out/assets.json").write_text(json.dumps(saved,indent=2))
+          PY
+          grep -RinE 'https?://|api|json|csv|ajax|fetch\(|FEUA|series|endpoint|download|histor' out/assets > out/assets_relevant.txt || true
+          wc -c out/metadata.html
+          head -100 out/metadata_relevant.txt || true
+          head -200 out/assets_relevant.txt || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eex-eua-widget-inspection-20260926
+          path: out/
+          retention-days: 30
