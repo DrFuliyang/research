@@ -28,6 +28,12 @@ DRP develops geometric measures of persistence, change, and stress in financial 
 | Variance memory and distributional memory | Distinct persistence objects and their empirical relationship |
 | Adaptive complexity and prototype identity | When a two-prototype representation is too compressed, and how many prototypes the geometry supports |
 
+### Conditional tail forecasting
+
+**DRP5 — [Geometric Stress Coordinates for Conditional Tail Forecasting: Soft Distributional Routing across Equity Markets](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7375598)** · SSRN 7375598 · 2026.
+
+Tests the role of geometric stress coordinates in conditional tail forecasting. Its scope is conditional on the scale filter, market, and estimation memory; comparative forecast-loss gains do not establish universal portability or absolute calibration.
+
 ### Latest public paper
 
 **DRP8 — [Beyond Two Barycenters: Adaptive Complexity in Distributional Regime Geometry](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7451619)**  
