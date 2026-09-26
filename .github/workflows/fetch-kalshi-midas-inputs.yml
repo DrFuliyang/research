@@ -1,59 +1,10 @@
-name: Fetch Kalshi-MIDAS estimation inputs
+name: DISABLED temporary workflow — fetch-kalshi-midas-inputs.yml
 
 on:
-  push:
-    branches:
-      - data-fetch-20260926
-    paths:
-      - ".github/workflows/fetch-kalshi-midas-inputs.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  fetch:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: python -m pip install --quiet pandas yfinance
-      - name: Fetch S&P 500 and extension factors
-        shell: python
-        run: |
-          from pathlib import Path
-          import pandas as pd, yfinance as yf, urllib.request, hashlib, json
-          out=Path("out"); out.mkdir(exist_ok=True)
-
-          px=yf.download("^GSPC", start="2021-01-01", end="2026-09-26",
-                         auto_adjust=False, progress=False, threads=False)
-          if isinstance(px.columns, pd.MultiIndex):
-              px.columns=px.columns.get_level_values(0)
-          px=px.reset_index()
-          px.to_csv(out/"gspc_daily.csv", index=False)
-
-          url="https://raw.githubusercontent.com/DrFuliyang/prediction_markets_public/garch-extension/garch_extension/data/kalshi_fomc_factors.csv"
-          urllib.request.urlretrieve(url, out/"kalshi_fomc_factors.csv")
-
-          def sha(p):
-              h=hashlib.sha256()
-              with open(p,"rb") as f:
-                  for b in iter(lambda:f.read(1024*1024),b""): h.update(b)
-              return h.hexdigest()
-          manifest={
-              "gspc_sha256":sha(out/"gspc_daily.csv"),
-              "kalshi_factors_sha256":sha(out/"kalshi_fomc_factors.csv"),
-              "factor_source":url,
-              "gspc_source":"Yahoo Finance via yfinance (^GSPC)",
-              "gspc_rows":int(len(px)),
-          }
-          (out/"manifest.json").write_text(json.dumps(manifest,indent=2))
-      - uses: actions/upload-artifact@v4
-        with:
-          name: kalshi-midas-inputs-20260926
-          path: out/
-          retention-days: 30
-          if-no-files-found: error
+      - run: echo "This temporary research workflow is disabled. Do not run."
