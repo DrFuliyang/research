@@ -60,9 +60,15 @@ The Japan series connects interest rates, exchange rates, intervention, and cros
 | Repatriation | How do portfolio flows inform the interpretation of currency movements? |
 | Intervention timing | How does intervention selection shape observed outcomes? |
 
-### Latest public paper
+### Selected public paper
 
-**[Oil-Price Innovations and the Treasury Term Premium: Evidence from 2010–2026](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7497760)** · SSRN 7497760 · posted September 23, 2026.  
+**[Japan's Fiscal Duration: A Measurement Architecture for Contractual Refinancing Exposure and the BOJ Balance Sheet](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7494820)** · SSRN 7494820 · 2026.
+
+A measurement architecture for contractual refinancing exposure and the BOJ balance sheet; not an estimate of consolidated fiscal cost.
+
+## Energy and US macro-finance
+
+**[Oil-Price Innovations and the Treasury Term Premium: Evidence from 2010–2026](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7497760)** · SSRN 7497760 · 2026.  
 This entry records the public paper identity only; use the SSRN record for current citation and version details.
 
 ## Monetary policy communication
@@ -76,6 +82,10 @@ Research covers climate-risk transmission through credit ratings and corporate b
 ## Market design and institutions
 
 Topics include Hong Kong IPO cornerstone participation and lockups, allocation reform, market access and trading constraints, and emerging compute derivatives.
+
+**[From Gatekeeping to Accountability: Institutional Tension in Hong Kong's 2026 Spin-off Reform](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7509761)** · SSRN 7509761 · 2026.
+
+Institutional analysis of a proposed spin-off reform and a framework for subsequent evaluation; not a completed causal estimate of reform effects.
 
 ## Finding a paper or replication package
 
