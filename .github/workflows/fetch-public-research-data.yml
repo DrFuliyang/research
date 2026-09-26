@@ -1,96 +1,10 @@
-name: Fetch public research data 2026-09-26
+name: DISABLED temporary workflow — fetch-public-research-data.yml
 
 on:
-  push:
-    branches:
-      - data-fetch-20260926
-    paths:
-      - ".github/workflows/fetch-public-research-data.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  fetch:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install parsers
-        run: python -m pip install --quiet pandas openpyxl
-
-      - name: Fetch official/public inputs
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p out/eex out/kalshi
-          curl --fail --location --retry 4 --retry-all-errors \
-            --user-agent "Mozilla/5.0 research-replication/2026-09-26" \
-            "https://public.eex-group.com/eex/eua-auction-report/emission-spot-primary-market-auction-report-2026-data.xlsx" \
-            -o out/eex/emission-spot-primary-market-auction-report-2026-data.xlsx
-
-          curl --fail --location --retry 4 --retry-all-errors \
-            "https://kalshi-and-the-rise-of-macro-markets.s3.amazonaws.com/daily_moments_data/daily_moments_fed_levels.csv" \
-            -o out/kalshi/daily_moments_fed_levels.csv
-
-          curl --fail --location --retry 4 --retry-all-errors \
-            "https://kalshi-and-the-rise-of-macro-markets.s3.amazonaws.com/daily_distribution_data/daily_distributions_fed_levels.csv" \
-            -o out/kalshi/daily_distributions_fed_levels.csv
-
-          sha256sum out/eex/* out/kalshi/* > out/SHA256SUMS.txt
-          date -u +"%Y-%m-%dT%H:%M:%SZ" > out/FETCHED_AT_UTC.txt
-
-      - name: Convert EEX workbook sheets to CSV
-        shell: python
-        run: |
-          from pathlib import Path
-          import pandas as pd
-          import json, re
-
-          x = Path("out/eex/emission-spot-primary-market-auction-report-2026-data.xlsx")
-          sheets = pd.read_excel(x, sheet_name=None, header=None)
-          inventory = []
-          for name, df in sheets.items():
-              safe = re.sub(r"[^A-Za-z0-9._-]+", "_", str(name)).strip("_") or "sheet"
-              path = Path("out/eex") / f"{safe}.csv"
-              df.to_csv(path, index=False, header=False)
-              inventory.append({
-                  "sheet": str(name),
-                  "rows": int(df.shape[0]),
-                  "cols": int(df.shape[1]),
-                  "csv": path.name,
-              })
-          Path("out/eex/workbook_inventory.json").write_text(
-              json.dumps(inventory, indent=2), encoding="utf-8"
-          )
-
-      - name: Record source manifest
-        shell: bash
-        run: |
-          cat > out/SOURCES.md <<'EOF'
-          # Public source manifest
-
-          EEX 2026 EUA Primary Market Auction Report:
-          https://public.eex-group.com/eex/eua-auction-report/emission-spot-primary-market-auction-report-2026-data.xlsx
-
-          Diercks, Katz & Wright public Kalshi derived moments:
-          https://kalshi-and-the-rise-of-macro-markets.s3.amazonaws.com/daily_moments_data/daily_moments_fed_levels.csv
-
-          Diercks, Katz & Wright public Kalshi daily distributions:
-          https://kalshi-and-the-rise-of-macro-markets.s3.amazonaws.com/daily_distribution_data/daily_distributions_fed_levels.csv
-          EOF
-
-      - name: Upload audit artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: research-data-20260926
-          path: out/
-          if-no-files-found: error
-          retention-days: 30
+      - run: echo "This temporary research workflow is disabled. Do not run."
