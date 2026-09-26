@@ -1,0 +1,50 @@
+name: Fetch ICE EUA Dec26 history
+
+on:
+  push:
+    branches:
+      - data-fetch-20260926
+    paths:
+      - ".github/workflows/fetch-eua-dec26.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet pandas requests beautifulsoup4
+      - name: Try ICE public delayed-history endpoint
+        shell: python
+        run: |
+          from pathlib import Path
+          import requests, json, pandas as pd, re
+          out=Path("out"); out.mkdir(exist_ok=True)
+          urls=[
+            "https://www.ice.com/marketdata/DelayedMarkets.shtml?getHistoricalChartDataAsJson=&marketId=5474739&historicalSpan=3",
+            "https://www.ice.com/marketdata/DelayedMarkets.shtml?getHistoricalChartDataAsJson=&marketId=5474739&historicalSpan=2",
+            "https://www.ice.com/marketdata/DelayedMarkets.shtml?getHistoricalChartDataAsJson=&marketId=5474739&historicalSpan=1",
+          ]
+          s=requests.Session()
+          s.headers.update({"User-Agent":"Mozilla/5.0 research-replication/2026-09-26",
+                            "Accept":"application/json,text/plain,*/*",
+                            "Referer":"https://www.ice.com/products/197/EUA-Futures/data?span=1&marketId=5474739"})
+          audit=[]
+          for i,u in enumerate(urls):
+              r=s.get(u,timeout=30)
+              (out/f"ice_response_{i}.txt").write_text(r.text,encoding="utf-8")
+              audit.append({"url":u,"status":r.status_code,"bytes":len(r.content),
+                            "content_type":r.headers.get("content-type")})
+          (out/"audit.json").write_text(json.dumps(audit,indent=2),encoding="utf-8")
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ice-eua-dec26-20260926
+          path: out/
+          retention-days: 30
