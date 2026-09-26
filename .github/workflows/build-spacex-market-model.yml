@@ -1,0 +1,91 @@
+name: Build SpaceX market-model panel
+
+on:
+  push:
+    branches:
+      - data-fetch-20260926
+    paths:
+      - ".github/workflows/build-spacex-market-model.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet pandas numpy yfinance statsmodels
+      - name: Estimate pre-event QQQ market models
+        shell: python
+        run: |
+          from pathlib import Path
+          import pandas as pd, numpy as np, yfinance as yf, statsmodels.api as sm, json
+          out=Path("out"); out.mkdir(exist_ok=True)
+          tickers=[
+          "NVDA","AAPL","MU","MSFT","AMD","AMZN","TSLA","GOOGL","INTC","GOOG","AVGO","META",
+          "AMAT","WMT","LRCX","CSCO","COST","KLAC","SNDK","NFLX","PANW","TXN","PLTR","MRVL",
+          "LIN","WDC","STX","AMGN","QCOM","CRWD","ADI","PEP","ASML","TMUS","APP","GILD","ARM",
+          "ISRG","SHOP","BKNG","VRTX","SBUX","FTNT","CDNS","MAR","MNST","CEG","ADP","CSX","CMCSA",
+          "DDOG","MELI","SNPS","ADBE","ALAB","ORLY","DASH","TER","AEP","MDLZ","INTU","NXPI","HON",
+          "HONA","ROST","CTAS","MPWR","WBD","LITE","REGN","PCAR","NBIS","ABNB","RKLB","FAST","BKR",
+          "EA","PDD","XEL","FANG","MCHP","FER","EXC","TTWO","AXON","ODFL","CCEP","CRWV","KDP","IDXX",
+          "ADSK","ALNY","PYPL","PAYX","ROP","TRI","GEHC","MSTR","KHC","CPRT","DXCM","WDAY","QQQ"
+          ]
+          aliases={"FER":"FER"}
+          req=[aliases.get(t,t) for t in tickers]
+          dat=yf.download(req,start="2025-07-01",end="2026-07-18",
+                          auto_adjust=False,group_by="ticker",threads=True,progress=False)
+          def s(t,f):
+              try:return dat[(t,f)].dropna()
+              except:return pd.Series(dtype=float)
+          q=s("QQQ","Close")
+          qret=np.log(q/q.shift(1)).rename("q")
+          records=[]
+          for t in tickers:
+              if t=="QQQ": continue
+              c=s(t,"Close")
+              v=s(t,"Volume")
+              if c.empty:
+                  records.append({"ticker":t,"status":"missing"}); continue
+              ret=np.log(c/c.shift(1)).rename("r")
+              train=pd.concat([ret,qret],axis=1).loc["2025-07-01":"2026-06-25"].dropna()
+              if len(train)<100:
+                  records.append({"ticker":t,"status":"short_history","n_train":len(train)}); continue
+              X=sm.add_constant(train["q"])
+              fit=sm.OLS(train["r"],X).fit()
+              a=float(fit.params["const"]); b=float(fit.params["q"])
+              def rr(d0,d1):
+                  try:return float(np.log(c.loc[d1]/c.loc[d0]))
+                  except:return np.nan
+              q6=float(np.log(q.loc["2026-07-06"]/q.loc["2026-07-02"]))
+              q7=float(np.log(q.loc["2026-07-07"]/q.loc["2026-07-06"]))
+              r6=rr("2026-07-02","2026-07-06"); r7=rr("2026-07-06","2026-07-07")
+              adv=(c*v).loc["2026-06-01":"2026-06-25"].mean()
+              avgshares=v.loc["2026-06-01":"2026-06-25"].mean()
+              records.append({
+                "ticker":t,"status":"ok","n_train":len(train),"alpha_daily":a,"beta_qqq":b,
+                "resid_sd":float(fit.resid.std(ddof=2)),"r2_market_model":float(fit.rsquared),
+                "logret_jul6":r6,"logret_jul7":r7,
+                "qqq_logret_jul6":q6,"qqq_logret_jul7":q7,
+                "ar_market_jul6":r6-(a+b*q6) if np.isfinite(r6) else np.nan,
+                "ar_market_jul7":r7-(a+b*q7) if np.isfinite(r7) else np.nan,
+                "adv_usd_jun1_25":adv,"avg_daily_shares_jun1_25":avgshares,
+              })
+          pd.DataFrame(records).to_csv(out/"spacex_market_model_panel.csv",index=False)
+          (out/"audit.json").write_text(json.dumps({
+              "requested":len(tickers)-1,
+              "training_window":["2025-07-01","2026-06-25"],
+              "benchmark":"QQQ",
+              "event_dates":["2026-07-06","2026-07-07"]
+          },indent=2))
+      - uses: actions/upload-artifact@v4
+        with:
+          name: spacex-market-model-20260926
+          path: out/
+          retention-days: 30
