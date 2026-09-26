@@ -71,6 +71,13 @@ These paths are preserved in their existing repository. No migration or skill-co
 - Rechecked `riskfolio-risk-parity`: `main` contains only `.gitignore`, with one visible branch and no returned releases or issues. It remains a cleanup candidate, but no deletion or archive operation was performed.
 - The ARIS preservation requirement remains unchanged: retain the 11 identified unique commits and seven listed research skill files. `translate-book` remains outside redundancy-based cleanup because its upstream comparison previously had no common ancestor.
 
+
+## Follow-up review — September 26, 2026
+
+- Confirmed the inventory remains 17 visible repositories. Before this review, no default branch in the visible inventory had a commit later than the September 19 hub maintenance update.
+- No new failed Actions run was returned. ARIS remains 11 commits ahead and 422 behind its upstream default branch; the seven protected research skill files are present, and current `main` contains only `.github/workflows/lint-skills-helpers.yml`.
+- The prior provenance decision for `translate-book` remains unchanged. No cleanup candidate was archived or deleted, and no visibility, collaborator, or license setting was changed.
+
 ## Administration status
 
 The owner completed repository creation and renaming in GitHub. The connector verified the active research and profile repositories and synchronized their documentation. Archiving and deletion remain outside this connector.

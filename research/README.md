@@ -60,6 +60,11 @@ The Japan series connects interest rates, exchange rates, intervention, and cros
 | Repatriation | How do portfolio flows inform the interpretation of currency movements? |
 | Intervention timing | How does intervention selection shape observed outcomes? |
 
+### Latest public paper
+
+**[Oil-Price Innovations and the Treasury Term Premium: Evidence from 2010–2026](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7497760)** · SSRN 7497760 · posted September 23, 2026.  
+This entry records the public paper identity only; use the SSRN record for current citation and version details.
+
 ## Monetary policy communication
 
 This research examines the volatility content of FOMC language, voting rights, and policy projections. It connects textual measures and institutional features with financial-market responses.
