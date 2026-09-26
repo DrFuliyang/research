@@ -1,35 +1,10 @@
-name: Fetch open EU ETS weekly dataset
+name: DISABLED temporary workflow — fetch-euets-weekly.yml
 
 on:
-  push:
-    branches:
-      - data-fetch-20260926
-    paths:
-      - ".github/workflows/fetch-euets-weekly.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  fetch:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - name: Fetch Zenodo open dataset
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p out
-          curl --fail --location --retry 3 --retry-all-errors \
-            "https://zenodo.org/records/20802491/files/data_fin.csv?download=1" \
-            -o out/data_fin.csv
-          sha256sum out/data_fin.csv > out/SHA256SUMS.txt
-          wc -l out/data_fin.csv
-          head -3 out/data_fin.csv
-      - uses: actions/upload-artifact@v4
-        with:
-          name: euets-weekly-open-20260926
-          path: out/
-          retention-days: 30
+      - run: echo "This temporary research workflow is disabled. Do not run."
