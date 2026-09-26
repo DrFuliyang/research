@@ -1,35 +1,10 @@
-name: Fetch Barchart EUA Dec26 proxy
+name: DISABLED temporary workflow — fetch-barchart-eua.yml
 
 on:
-  push:
-    branches:
-      - data-fetch-20260926
-    paths:
-      - ".github/workflows/fetch-barchart-eua.yml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  fetch:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - name: Fetch public Barchart proxy
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p out
-          curl --fail --location --retry 3 --retry-all-errors \
-            --user-agent "Mozilla/5.0" \
-            "https://www.barchart.com/proxies/timeseries/queryeod.ashx?symbol=CKZ26&data=daily&maxrecords=300&volume=contract&backadjust=false&daystoexpiration=1&contractroll=expiration" \
-            -o out/CKZ26_daily.csv
-          wc -c out/CKZ26_daily.csv
-          head -5 out/CKZ26_daily.csv
-      - uses: actions/upload-artifact@v4
-        with:
-          name: barchart-eua-dec26-20260926
-          path: out/
-          retention-days: 30
+      - run: echo "This temporary research workflow is disabled. Do not run."
