@@ -14,6 +14,14 @@ The main research identity is organized around IMD, DRP, and the empirical field
 | [garch-quant-skill](https://github.com/DrFuliyang/garch-quant-skill) | Modelling prototype | EGARCH/LSTM source; empirical validation remains a separate task |
 | [pairs-trading](https://github.com/DrFuliyang/pairs-trading) | Workflow specification | README and skill specification; standalone backtest implementation not included |
 
+## Prediction-market data resource
+
+[Prediction Markets Public](https://github.com/DrFuliyang/prediction_markets_public) is a fork of [jdkatz21/Prediction_Markets_Public](https://github.com/jdkatz21/Prediction_Markets_Public), the replication package for Diercks, Katz and Wright's *Kalshi and the Rise of Macro Markets*. Preserve the upstream authorship, citation and data-use terms.
+
+The separate [GARCH extension](https://github.com/DrFuliyang/prediction_markets_public/tree/garch-extension/garch_extension) adds a meeting-frequency factor layer from public upstream distributions and moments. Its [source manifest](https://github.com/DrFuliyang/prediction_markets_public/blob/garch-extension/garch_extension/data/source_manifest.json) records input and output hashes. This is a data transformation resource; workflow success does not validate a paper's empirical results.
+
+The extension workflow last completed successfully on October 2, 2026 (UTC). The inherited raw collector and upstream S3 publisher are restricted to the original repository; they are not required by the extension.
+
 ## Paper-specific packages
 
 Paper-specific repositories will be added as documented releases become available. Their README files should identify the paper version, inputs, run commands, and reproduced outputs.

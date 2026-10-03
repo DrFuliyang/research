@@ -8,6 +8,7 @@
 | :--- | :--- | :--- |
 | DrFuliyang | GitHub profile README | Active; profile README published |
 | research | Main research hub | Active; renamed from garch-quant with history retained |
+| prediction_markets_public | Upstream prediction-market replication package with a separate local factor extension | Active; default branch `main`, local additions on `garch-extension` |
 | imd | Institutional Market Dynamics releases | Reserved for a substantive release |
 | drp | Distributional Regime Persistence releases | Reserved for a substantive release |
 | crypto-roughness | Crypto roughness replication materials | Reserved for a substantive release |
@@ -37,3 +38,7 @@ Display IMD and DRP first in the research hub, followed by empirical research fi
 3. Direct repository links were synchronized to the research name.
 
 The account now has a live profile README and a separate research hub.
+
+## Review — October 3, 2026
+
+The visible account inventory is 18 public repositories. The new prediction-market fork is a supporting data resource, not a replacement for IMD or DRP. Its upstream authorship and separate local extension are documented in the [resource directory](../REPOSITORIES.md). No reserved research repository was created or renamed in this review.

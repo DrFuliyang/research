@@ -23,6 +23,7 @@ Adaptive prototype complexity, identity stability, and the sufficiency of the tw
 | :--- | :--- |
 | [Volatility and crypto markets](research/README.md#volatility-and-crypto-markets) | GARCH models; apparent roughness; perpetual-futures funding; tail risk |
 | [Japan macro-finance](research/README.md#japan-macro-finance) | JGB yield shocks; carry unwinds; yen intervention; repatriation |
+| [Energy and US macro-finance](research/README.md#energy-and-us-macro-finance) | Oil-price innovations; Treasury term premium |
 | [Monetary policy communication](research/README.md#monetary-policy-communication) | FOMC language; voting rights; policy projections; volatility |
 | [Climate risk and AI](research/README.md#climate-risk-and-ai) | Climate signals; credit ratings; disclosure; AI exposure and market structure |
 | [Market design and institutions](research/README.md#market-design-and-institutions) | Hong Kong IPOs; cornerstone investors; lockups; regulatory reform; compute derivatives |

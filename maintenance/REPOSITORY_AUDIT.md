@@ -78,6 +78,14 @@ These paths are preserved in their existing repository. No migration or skill-co
 - No new failed Actions run was returned. ARIS remains 11 commits ahead and 422 behind its upstream default branch; the seven protected research skill files are present, and current `main` contains only `.github/workflows/lint-skills-helpers.yml`.
 - The prior provenance decision for `translate-book` remains unchanged. No cleanup candidate was archived or deleted, and no visibility, collaborator, or license setting was changed.
 
+## Follow-up review — October 3, 2026
+
+- Confirmed 18 visible public repositories. The addition is [prediction_markets_public](https://github.com/DrFuliyang/prediction_markets_public), created September 26 as a fork of [jdkatz21/Prediction_Markets_Public](https://github.com/jdkatz21/Prediction_Markets_Public). Retain both `main` and `garch-extension`; the latter contains local factor code, a calendar, derived factors and a source manifest.
+- The [GARCH extension run](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/37033020003) succeeded October 2 (UTC). The inherited [Daily Data Update run](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/37065822748) failed later that day while loading an empty Kalshi private-key value. Its later steps also publish to the upstream authors' S3 bucket. Added an original-repository-only job condition in [commit fb5a2b6](https://github.com/DrFuliyang/prediction_markets_public/commit/fb5a2b61f51299e3c079fba908353e7298c3aa71). No credentials were requested or changed, and neither data workflow was rerun.
+- The hub has a separate `data-fetch-20260926` branch. Its four failed diagnostic runs concern three temporary workflow files; those files now contain only a manual no-op message. They are absent from `main`. Historical failures were retained, without rerunning collection or estimation.
+- ARIS remains 11 commits ahead of its upstream default branch (434 behind at this review); all seven protected skill files are present. Its two old sync failures remain historical.
+- `translate-book` remains protected pending its separate provenance review. No branches, tags, releases, issues or repositories were deleted, and no visibility, collaborator or license setting was changed.
+
 ## Administration status
 
 The owner completed repository creation and renaming in GitHub. The connector verified the active research and profile repositories and synchronized their documentation. Archiving and deletion remain outside this connector.
