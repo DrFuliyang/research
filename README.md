@@ -30,6 +30,7 @@ Adaptive prototype complexity, identity stability, and the sufficiency of the tw
 
 ## Explore the resources
 
+- **[Public paper catalogue](research/PAPERS.md)** — 34 title–identifier entries from the October 19 catalogue reconciliation.
 - **[Research guide](research/README.md)** — programme structure and paper discovery.
 - **[Repository directory](REPOSITORIES.md)** — selected research tools and workflow resources.
 - **[Replication guide](REPRODUCIBILITY.md)** — documentation and release conventions for research materials.

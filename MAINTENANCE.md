@@ -113,3 +113,11 @@ Next review: verify that the inherited collector skips in this fork, check the i
 - No workflow was triggered, empirical estimation rerun, or repository deleted, renamed, archived or administratively changed. Website content was inspected, not redeployed.
 
 Next review: follow the existing extension schedule, revisit direct SSRN version verification, and check public paper navigation for new records. Public search coverage is not a complete author-catalogue audit.
+
+
+## Public catalogue reconciliation — October 19, 2026
+
+- Reconciled 34 legible title–abstract-ID pairs from two owner-provided screenshots of publicly available SSRN papers. Added [research/PAPERS.md](research/PAPERS.md) and linked it from the hub and guide. This is a partial catalogue, not 34 newly published papers or an exhaustive account inventory.
+- The additions include SSRN 7621100, 7620802, 7608119, 7600100, 7531599, 7531578, 7527141 and 7520379, alongside earlier papers missing from individual theme navigation. Used only public bibliographic titles and identifiers; no administrative status, account metrics, private manuscript, or screenshot was published.
+- The final partially cut-off row was not transcribed. The screenshots' account dates were not relabelled as posting or PDF-revision dates. Search queries for the newly visible identifiers returned no matches, so the source of these mappings remains the owner-provided public-catalogue evidence, not independent live SSRN or PDF verification.
+- Retained the previously verified coauthor information in the research guide; the catalogue does not infer a sole-author list from the account's submission-owner column. All existing programme mappings and repository history remain intact.

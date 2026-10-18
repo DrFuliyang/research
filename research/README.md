@@ -115,6 +115,8 @@ Public bibliographic record checked through the SSRN index on October 19, 2026; 
 
 ## Finding a paper or replication package
 
+The [public paper catalogue](PAPERS.md) lists 34 papers identified from the author's October 19, 2026 catalogue screenshots, including the additional climate-finance, algorithmic-decision, Kalshi, market-design and volatility records not individually listed in this selective guide.
+
 Use the [SSRN author catalogue](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11814228) for paper discovery. The inventory here is thematic and selective.
 
 A paper-specific release should link its exact paper version, source code, data documentation, and run instructions. See the [replication guide](../REPRODUCIBILITY.md).
