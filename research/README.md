@@ -14,7 +14,7 @@ IMD studies the effects of shared institutional constraints on portfolio demand 
 | Korea: ETF reform | [Leveraged ETF Reform and Intra-Sector Correlation Dynamics: Evidence from Korea's KOSPI](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7158999) |
 | Korea: trading halts | [When Markets Move as One: Institutional Synchronization after Trading Halts — Evidence from Korea's 2026 Halt Cluster](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7148038) |
 
-Source for this programme-to-paper mapping: [IMD programme website](https://imd.garch.institute/), reviewed September 11, 2026. The linked paper records carry version and citation details.
+Source for this programme-to-paper mapping: [IMD programme website](https://imd.garch.institute/), reviewed October 19, 2026. The linked paper records carry version and citation details.
 
 ## Distributional Regime Persistence
 
@@ -33,6 +33,12 @@ DRP develops geometric measures of persistence, change, and stress in financial 
 **DRP5 — [Geometric Stress Coordinates for Conditional Tail Forecasting: Soft Distributional Routing across Equity Markets](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7375598)** · SSRN 7375598 · 2026.
 
 Tests the role of geometric stress coordinates in conditional tail forecasting. Its scope is conditional on the scale filter, market, and estimation memory; comparative forecast-loss gains do not establish universal portability or absolute calibration.
+
+### External portability
+
+**DRP6 — [Conditional Portability of Geometric Stress Coordinates: A Frozen Eight-Market Test of Geometric Tail Routing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7377778)** · SSRN 7377778 · 2026.
+
+Studies external portability under a frozen design. The programme page reports limited conditional evidence rather than universal portability or absolute calibration. Title and identifier checked against the [DRP programme page](https://drp.garch.institute/) on October 19, 2026; direct SSRN retrieval was blocked.
 
 ### Latest public paper
 
@@ -85,6 +91,16 @@ This research examines the volatility content of FOMC language, voting rights, a
 
 Research covers climate-risk transmission through credit ratings and corporate bonds, disclosure and information availability, heat exposure and AI-related activity, and the financial implications of AI adoption.
 
+### Additional public papers
+
+| Paper | Authors | SSRN | Posted |
+| :--- | :--- | :--- | :--- |
+| Model-Informed Gold Revisions Inflate Measured Accuracy: A Versioned Gold-Standard Protocol for LLM Extraction of ESG Data | Fuli Yang | [7598018](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7598018) | October 12, 2026 |
+| Design Abundance and Laboratory Scarcity: The Changing Production Function of AI Drug Discovery | Fuli Yang | [7590558](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590558) | October 12, 2026 |
+| The AI Capital Expenditure Cycle: Investment, Financing, and Risk Across the Compute-power Complex | Fuli Yang, Jing Huang and Shiyu Lin | [7574438](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7574438) | October 8, 2026 |
+
+Bibliographic entries checked against publicly indexed SSRN records on October 19, 2026. This check does not establish the latest PDF version or independently validate the reported results.
+
 ## Market design and institutions
 
 Topics include Hong Kong IPO cornerstone participation and lockups, allocation reform, market access and trading constraints, and emerging compute derivatives.
@@ -92,6 +108,10 @@ Topics include Hong Kong IPO cornerstone participation and lockups, allocation r
 **[From Gatekeeping to Accountability: Institutional Tension in Hong Kong's 2026 Spin-off Reform](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7509761)** · SSRN 7509761 · 2026.
 
 Institutional analysis of a proposed spin-off reform and a framework for subsequent evaluation; not a completed causal estimate of reform effects.
+
+**[Fast-Entry Funding Pressure and Incumbent Liquidity: Evidence from the SpaceX Nasdaq-100 Inclusion](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7531538)** · Fuli Yang · SSRN 7531538 · posted September 30, 2026.
+
+Public bibliographic record checked through the SSRN index on October 19, 2026; no replication or latest-file verification is claimed.
 
 ## Finding a paper or replication package
 

@@ -91,3 +91,11 @@ These paths are preserved in their existing repository. No migration or skill-co
 The owner completed repository creation and renaming in GitHub. The connector verified the active research and profile repositories and synchronized their documentation. Archiving and deletion remain outside this connector.
 
 The owner previously deleted GARCHSigma.github.io, sigma.garch.space, bayes.garch.space, copula.garch.space, and macro.garch.space. Their repository endpoints subsequently returned 404.
+
+
+## Follow-up review — October 19, 2026
+
+- Inventory remains 18 accessible public repositories; hub and profile default branches remain `main`. No repository administration changes were made.
+- No Actions failure after October 3 was returned across the inventory. The prediction-market extension succeeded October 9 and 16 (UTC), while the inherited collector skipped on both dates. See the [latest extension run](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/38919806861) and [collector skip](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/38958172426).
+- ARIS comparison is 11 ahead / 441 behind upstream; all seven protected skill paths listed above remain present. No upstream synchronization was performed.
+- `translate-book` remains retained. Cleanup candidates were not deleted or archived; no all-branch/tag/release/issue deletion review is claimed in this maintenance pass.
