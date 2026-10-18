@@ -42,3 +42,8 @@ The account now has a live profile README and a separate research hub.
 ## Review — October 3, 2026
 
 The visible account inventory is 18 public repositories. The new prediction-market fork is a supporting data resource, not a replacement for IMD or DRP. Its upstream authorship and separate local extension are documented in the [resource directory](../REPOSITORIES.md). No reserved research repository was created or renamed in this review.
+
+
+## Selected-paper policy — October 19, 2026
+
+Present 6–8 representative papers in total on GitHub, including the published journal article, with IMD and DRP as core programmes. Keep individual paper selection in the hub; use the guide for themes and programme links. Point to the SSRN author page for all other papers. Do not maintain a complete catalogue, bulk metadata file or hidden secondary bibliography. Reassess the selection through replacement rather than accumulation.

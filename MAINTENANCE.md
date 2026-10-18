@@ -10,7 +10,7 @@ Maintain this research hub and its links to Fuli Yang's academic homepage, GARCH
 
 1. Read the latest default branch before editing.
 2. Check internal links and repository destinations.
-3. Verify new paper identifiers, titles, versions, and release availability against author or publisher records.
+3. Maintain a curated selection of 6–8 papers in total, including the published journal article. Verify selected titles, author lists, identifiers and versions against public records. Replace entries when warranted; do not append every new paper, recreate a full bibliography, or store bulk SSRN metadata. Direct readers to the SSRN author page for all other papers.
 4. Keep research programmes distinct from workflow tools and upstream forks.
 5. Correct documented navigation and wording problems with small, descriptive commits.
 6. Record material changes and unresolved access or verification problems.
@@ -118,7 +118,7 @@ Next review: follow the existing extension schedule, revisit direct SSRN version
 
 ## Public catalogue reconciliation — October 19, 2026
 
-- Reconciled 34 legible title–abstract-ID pairs from two owner-provided screenshots of publicly available SSRN papers. Added [research/PAPERS.md](research/PAPERS.md) and linked it from the hub and guide. This is a partial catalogue, not 34 newly published papers or an exhaustive account inventory.
+- Reconciled 34 legible title–abstract-ID pairs from two owner-provided screenshots of publicly available SSRN papers. Added `research/PAPERS.md` (historical file, subsequently removed from the current branch) and linked it from the hub and guide. This is a partial catalogue, not 34 newly published papers or an exhaustive account inventory.
 - The additions include SSRN 7621100, 7620802, 7608119, 7600100, 7531599, 7531578, 7527141 and 7520379, alongside earlier papers missing from individual theme navigation. Used only public bibliographic titles and identifiers; no administrative status, account metrics, private manuscript, or screenshot was published.
 - The final partially cut-off row was not transcribed. The screenshots' account dates were not relabelled as posting or PDF-revision dates. Search queries for the newly visible identifiers returned no matches, so the source of these mappings remains the owner-provided public-catalogue evidence, not independent live SSRN or PDF verification.
 - Retained the previously verified coauthor information in the research guide; the catalogue does not infer a sole-author list from the account's submission-owner column. All existing programme mappings and repository history remain intact.
@@ -140,3 +140,11 @@ Next review: follow the existing extension schedule, revisit direct SSRN version
 - The live personal publication page labels it Published / ahead-of-print. Crossref's DOI API independently confirms type `journal-article`, the title, Fuli Yang as author, journal, online publication date October 7, 2026 and pages 1–20; volume and issue are absent. The publisher page presented a Cloudflare security check, so no publisher-body inspection is claimed. No private acceptance or submission correspondence was used.
 - Stored this journal record separately from the 108 SSRN records in the structured catalogue. No unverified equivalence with an earlier differently titled SSRN paper, or total of distinct works, is inferred. The profile README is being synchronized with the catalogue and journal-publication navigation.
 - Browser access also returned usable body content for `fuliyang.io` and its publications page. This supersedes the earlier text-reader-only homepage extraction limitation; no website edits were made.
+
+
+## Curated presentation — October 19, 2026
+
+- The owner clarified that GitHub should show only 6–8 selected papers and does not need a complete catalogue, including at a secondary location. This instruction supersedes today's earlier full-catalogue work.
+- Reduced the hub to eight representative papers: one published JFRA article and seven working papers spanning IMD, DRP, Japan, crypto roughness and AI investment. The research guide now provides thematic navigation rather than further individual paper lists.
+- Removed `research/PAPERS.md` and `research/papers.json` from the current branch and removed their navigation links, including the profile link. The complete bibliography is provided only through the SSRN author page. Git history is retained.
+- Updated maintenance and account-structure rules to keep the selection within 6–8 papers; routine reviews must not recreate a full catalogue or automatically append new public papers. No SSRN record or website content was changed.
