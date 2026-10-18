@@ -14,6 +14,7 @@ Maintain this research hub and its links to Fuli Yang's academic homepage, GARCH
 4. Keep research programmes distinct from workflow tools and upstream forks.
 5. Correct documented navigation and wording problems with small, descriptive commits.
 6. Record material changes and unresolved access or verification problems.
+7. If the text reader cannot retrieve SSRN, check the public author or paper page with the browser when available. Record the access method and distinguish browser success from reader failure. Use displayed Posted and Last revised dates separately; do not infer them from Date Written or private account dates.
 
 Do not infer publication status from submission activity or working-paper availability. Keep editorial correspondence and private research materials out of public documentation.
 
@@ -121,3 +122,21 @@ Next review: follow the existing extension schedule, revisit direct SSRN version
 - The additions include SSRN 7621100, 7620802, 7608119, 7600100, 7531599, 7531578, 7527141 and 7520379, alongside earlier papers missing from individual theme navigation. Used only public bibliographic titles and identifiers; no administrative status, account metrics, private manuscript, or screenshot was published.
 - The final partially cut-off row was not transcribed. The screenshots' account dates were not relabelled as posting or PDF-revision dates. Search queries for the newly visible identifiers returned no matches, so the source of these mappings remains the owner-provided public-catalogue evidence, not independent live SSRN or PDF verification.
 - Retained the previously verified coauthor information in the research guide; the catalogue does not infer a sole-author list from the account's submission-owner column. All existing programme mappings and repository history remain intact.
+
+
+## Live SSRN catalogue reconciliation — October 19, 2026
+
+- Browser access succeeded without sign-in for the public author page and the DRP5 and DRP2 detail pages. The earlier HTTP 403 results are limitations of that text-retrieval method, not evidence that SSRN is inaccessible. This live check supersedes the current access blockers and screenshot-only provenance described earlier today, while retaining those historical observations.
+- Replaced the 34-entry partial catalogue with all 108 public author-page records: 108 unique SSRN identifiers, 17 coauthored records, and 22 rows displaying a Last revised date. Preserved author order and exact normalized public titles; omitted account statistics and private information. Added `research/papers.json` for future comparisons.
+- Verified the copied record payload against the browser-extracted payload with a transfer checksum. This verifies transcription consistency, not PDF authenticity or data/result replication. Updated the hub and guide catalogue links/counts, and checked the IMD dynamic-correlation entry against its full public title.
+- DRP5's updated title and September 25 revision are confirmed on its detail page; DRP6's full title and September 25 revision are confirmed in the author list. DRP2's detail page confirms an October 18 revision and its new past-only KS comparison. Added direct DRP2 and Global Stress navigation, preserving their respective two- and three-author lists.
+- The author list shows October 18 revisions for DRP2 (7245378), Global Stress (7259360) and compute derivatives (7324139). The compute paper's current public title is *Futures Before Fungibility: Benchmark Design and Market Formation in Compute Derivatives*; this resolves the title uncertainty carried in earlier reviews. Revised dates are public metadata; no PDF inspection, journal status or empirical validation is inferred.
+- The catalogue is a snapshot of the 108 displayed records at this check, not a claim of permanent completeness. Existing research programmes, fork attribution, protected ARIS additions, repository visibility and licenses remain unchanged.
+
+
+## Journal publication follow-up — October 19, 2026
+
+- Added *Where public climate signals remain visible: issuer compression and debt-rating sorting in China*, Fuli Yang, *Journal of Financial Reporting and Accounting*, DOI 10.1108/JFRA-08-2026-0832, to a distinct journal-publication section in the hub, guide and catalogue.
+- The live personal publication page labels it Published / ahead-of-print. Crossref's DOI API independently confirms type `journal-article`, the title, Fuli Yang as author, journal, online publication date October 7, 2026 and pages 1–20; volume and issue are absent. The publisher page presented a Cloudflare security check, so no publisher-body inspection is claimed. No private acceptance or submission correspondence was used.
+- Stored this journal record separately from the 108 SSRN records in the structured catalogue. No unverified equivalence with an earlier differently titled SSRN paper, or total of distinct works, is inferred. The profile README is being synchronized with the catalogue and journal-publication navigation.
+- Browser access also returned usable body content for `fuliyang.io` and its publications page. This supersedes the earlier text-reader-only homepage extraction limitation; no website edits were made.

@@ -2,6 +2,13 @@
 
 [Research hub](../README.md) · [Academic homepage](https://fuliyang.io/) · [GARCH Institute](https://garch.institute/)
 
+## Journal articles
+
+**[Where public climate signals remain visible: issuer compression and debt-rating sorting in China](https://doi.org/10.1108/jfra-08-2026-0832)**  
+Fuli Yang · *Journal of Financial Reporting and Accounting* · published online October 7, 2026 · pp. 1–20 · ahead-of-print.
+
+DOI: [10.1108/JFRA-08-2026-0832](https://doi.org/10.1108/jfra-08-2026-0832). Title, author, journal, online date and pages confirmed through the [Crossref DOI record](https://api.crossref.org/works/10.1108/JFRA-08-2026-0832), consistent with the author's [publication page](https://fuliyang.io/publications), checked October 19, 2026. Volume and issue are not yet present in the checked registry record.
+
 ## Institutional Market Dynamics
 
 IMD studies the effects of shared institutional constraints on portfolio demand and market covariance. Its structure connects theory, formal methods, and empirical applications.
@@ -10,7 +17,7 @@ IMD studies the effects of shared institutional constraints on portfolio demand 
 | :--- | :--- |
 | Foundation | [Institutional Synchronization Theory](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7148838) |
 | Formal method | [Constraint Geometry of Institutional Synchronization](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7178198) |
-| Dynamic correlation | [A Constraint Geometry State-Space Model of Dynamic Correlation](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7188139) |
+| Dynamic correlation | [A Constraint Geometry State-Space Model of Dynamic Correlation With an Empirical Demonstration on ENSO-Driven Commodity Markets](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7188139) |
 | Korea: ETF reform | [Leveraged ETF Reform and Intra-Sector Correlation Dynamics: Evidence from Korea's KOSPI](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7158999) |
 | Korea: trading halts | [When Markets Move as One: Institutional Synchronization after Trading Halts — Evidence from Korea's 2026 Halt Cluster](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7148038) |
 
@@ -28,6 +35,14 @@ DRP develops geometric measures of persistence, change, and stress in financial 
 | Variance memory and distributional memory | Distinct persistence objects and their empirical relationship |
 | Adaptive complexity and prototype identity | When a two-prototype representation is too compressed, and how many prototypes the geometry supports |
 
+### Real-time stress monitoring
+
+**DRP2 — [Real-Time Distributional Regime Monitoring: Online Wasserstein Detection of Market Stress](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7245378)** · Fuli Yang and Tingting Qiu · last revised October 18, 2026.
+
+The current public abstract adds a direct comparison with past-only Kolmogorov–Smirnov monitors and assesses prototype-based stress measurement through event coverage, response time and alarm duration. Title, authors, revision date and abstract were checked on the live SSRN detail page on October 19, 2026.
+
+**[Global Stress without Global Shape: Volatility Synchronization and Distributional Fragmentation across Financial Markets](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7259360)** · Fuli Yang, Tingting Qiu and Shiyu Lin · last revised October 18, 2026, as displayed on the live author page.
+
 ### Conditional tail forecasting
 
 **DRP5 — [Geometric Stress Coordinates for Conditional Tail Forecasting: Soft Distributional Routing across Equity Markets](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7375598)** · SSRN 7375598 · 2026.
@@ -38,7 +53,7 @@ Tests the role of geometric stress coordinates in conditional tail forecasting. 
 
 **DRP6 — [Conditional Portability of Geometric Stress Coordinates: A Frozen Eight-Market Test of Geometric Tail Routing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7377778)** · SSRN 7377778 · 2026.
 
-Studies external portability under a frozen design. The programme page reports limited conditional evidence rather than universal portability or absolute calibration. Title and identifier checked against the [DRP programme page](https://drp.garch.institute/) on October 19, 2026; direct SSRN retrieval was blocked.
+Studies external portability under a frozen design. The programme page reports limited conditional evidence rather than universal portability or absolute calibration. Title, subtitle, identifier and September 25, 2026 revision date confirmed on the live SSRN author page on October 19, 2026, consistent with the [DRP programme page](https://drp.garch.institute/).
 
 ### Latest public paper
 
@@ -99,7 +114,7 @@ Research covers climate-risk transmission through credit ratings and corporate b
 | Design Abundance and Laboratory Scarcity: The Changing Production Function of AI Drug Discovery | Fuli Yang | [7590558](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7590558) | October 12, 2026 |
 | The AI Capital Expenditure Cycle: Investment, Financing, and Risk Across the Compute-power Complex | Fuli Yang, Jing Huang and Shiyu Lin | [7574438](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7574438) | October 8, 2026 |
 
-Bibliographic entries checked against publicly indexed SSRN records on October 19, 2026. This check does not establish the latest PDF version or independently validate the reported results.
+Bibliographic entries, author order and posting dates checked against the live SSRN author page on October 19, 2026. Public record verification is separate from PDF inspection or empirical replication.
 
 ## Market design and institutions
 
@@ -111,11 +126,15 @@ Institutional analysis of a proposed spin-off reform and a framework for subsequ
 
 **[Fast-Entry Funding Pressure and Incumbent Liquidity: Evidence from the SpaceX Nasdaq-100 Inclusion](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7531538)** · Fuli Yang · SSRN 7531538 · posted September 30, 2026.
 
-Public bibliographic record checked through the SSRN index on October 19, 2026; no replication or latest-file verification is claimed.
+Public bibliographic record and posting date checked on the live SSRN author page on October 19, 2026.
+
+### Compute derivatives
+
+**[Futures Before Fungibility: Benchmark Design and Market Formation in Compute Derivatives](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7324139)** · Fuli Yang · last revised October 18, 2026, as displayed on the live SSRN author page. This resolves the older title variants noted in earlier maintenance reviews.
 
 ## Finding a paper or replication package
 
-The [public paper catalogue](PAPERS.md) lists 34 papers identified from the author's October 19, 2026 catalogue screenshots, including the additional climate-finance, algorithmic-decision, Kalshi, market-design and volatility records not individually listed in this selective guide.
+The [public paper catalogue](PAPERS.md) covers all 108 records displayed on the public SSRN author page on October 19, 2026, including ordered author lists, posting dates and displayed revision dates. The [structured catalogue](papers.json) supports future record comparisons.
 
 Use the [SSRN author catalogue](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11814228) for paper discovery. The inventory here is thematic and selective.
 

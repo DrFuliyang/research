@@ -5,6 +5,13 @@
 
 Welcome to my research hub. My work studies how institutions, information, and market design shape financial risk, and develops methods for measuring volatility, distributional change, and market memory.
 
+## Journal publication
+
+**[Where public climate signals remain visible: issuer compression and debt-rating sorting in China](https://doi.org/10.1108/jfra-08-2026-0832)**  
+Fuli Yang · *Journal of Financial Reporting and Accounting* · published online October 7, 2026.
+
+[Journal record and public paper catalogue](research/PAPERS.md) · [DOI 10.1108/JFRA-08-2026-0832](https://doi.org/10.1108/jfra-08-2026-0832)
+
 ## Two core research programmes
 
 | Programme | Central question | Explore |
@@ -30,7 +37,7 @@ Adaptive prototype complexity, identity stability, and the sufficiency of the tw
 
 ## Explore the resources
 
-- **[Public paper catalogue](research/PAPERS.md)** — 34 title–identifier entries from the October 19 catalogue reconciliation.
+- **[Public paper catalogue](research/PAPERS.md)** — 108 live SSRN records with authors, posting dates and displayed revision dates.
 - **[Research guide](research/README.md)** — programme structure and paper discovery.
 - **[Repository directory](REPOSITORIES.md)** — selected research tools and workflow resources.
 - **[Replication guide](REPRODUCIBILITY.md)** — documentation and release conventions for research materials.
