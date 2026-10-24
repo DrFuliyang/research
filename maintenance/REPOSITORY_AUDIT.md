@@ -99,3 +99,11 @@ The owner previously deleted GARCHSigma.github.io, sigma.garch.space, bayes.garc
 - No Actions failure after October 3 was returned across the inventory. The prediction-market extension succeeded October 9 and 16 (UTC), while the inherited collector skipped on both dates. See the [latest extension run](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/38919806861) and [collector skip](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/38958172426).
 - ARIS comparison is 11 ahead / 441 behind upstream; all seven protected skill paths listed above remain present. No upstream synchronization was performed.
 - `translate-book` remains retained. Cleanup candidates were not deleted or archived; no all-branch/tag/release/issue deletion review is claimed in this maintenance pass.
+
+
+## Follow-up review — October 24, 2026
+
+- Public inventory remains 18 repositories; hub and profile remain public on `main`. Reviewed account structure and the eight-paper presentation policy; no structural change was needed.
+- Across the 18 public Actions histories, no new failure after October 19 was returned. The extension [succeeded October 23 (UTC)](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/39976590104); the inherited collector [skipped](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/40018240661). Refreshed only the resource directory's dated status links.
+- ARIS remains 11 ahead / 502 behind upstream; its seven protected skill paths are present. The extension branch and manifest path remain available. Retained `translate-book` without inferring redundancy from its previous no-common-ancestor comparison.
+- No cleanup candidate, branch, tag, release, issue or repository was deleted. No private inventory details were added to public documentation. A comprehensive pre-deletion review was not needed or claimed.

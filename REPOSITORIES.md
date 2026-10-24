@@ -20,7 +20,7 @@ The main research identity is organized around IMD, DRP, and the empirical field
 
 The separate [GARCH extension](https://github.com/DrFuliyang/prediction_markets_public/tree/garch-extension/garch_extension) adds a meeting-frequency factor layer from public upstream distributions and moments. Its [source manifest](https://github.com/DrFuliyang/prediction_markets_public/blob/garch-extension/garch_extension/data/source_manifest.json) records input and output hashes. This is a data transformation resource; workflow success does not validate a paper's empirical results.
 
-The extension workflow last completed successfully on [October 16, 2026 (UTC)](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/38919806861). The inherited collector was correctly [skipped on October 16](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/38958172426), following the October 3 guard fix. The inherited raw collector and upstream S3 publisher are restricted to the original repository; they are not required by the extension.
+The extension workflow last completed successfully on [October 23, 2026 (UTC)](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/39976590104). The inherited collector was correctly [skipped on October 23 (UTC)](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/40018240661), following the October 3 guard fix. The inherited raw collector and upstream S3 publisher are restricted to the original repository; they are not required by the extension.
 
 ## Paper-specific packages
 
