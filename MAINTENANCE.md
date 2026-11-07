@@ -174,3 +174,11 @@ Next review: maintain the same selected-paper limit, check the next existing dat
 - No repository administration changes or deletions were made. No private materials or submission information were published.
 
 Next review: keep the 6–8-paper selection limit, verify selected public-record revisions and the next existing workflow results, and replace a selected entry only when supported by public evidence.
+
+## Review — November 7, 2026
+
+- The authorized connection returned the same 18 public repositories. The hub and profile still use `main`; account structure required no edit. Checked 22 relative links across seven hub Markdown files and the profile navigation.
+- The browser loaded the public SSRN author page when the text reader could not. All seven selected working-paper entries match its titles, identifiers and ordered authors. DRP2 and DRP5 still show October 18 and September 25 as their last revision dates. This review checked public metadata without comparing PDF contents. The selection remains eight papers, with the SSRN author page as the link for other papers.
+- The academic publications page and institute homepage rendered in the browser; the IMD and DRP programme pages returned readable text. The academic publications page and Crossref agree with the hub's JFRA title and DOI. Crossref lists Fuli Yang and October 7, 2026 as the online publication date.
+- No new failed Actions run appeared after the October 31 review across the 18 public repositories. The [GARCH extension](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/42262996793) succeeded November 6 at 17:35 UTC; the [inherited collector](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/42301205746) skipped at 21:59 UTC. Updated the resource directory to those runs. The extension branch and source manifest remain available. No workflow was triggered.
+- ARIS retains 11 local commits and seven protected skill files; the upstream comparison is now 532 behind. Retained `translate-book` under the separate provenance rule. No repository administration changes were made.

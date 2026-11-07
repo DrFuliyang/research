@@ -114,3 +114,10 @@ The owner previously deleted GARCHSigma.github.io, sigma.garch.space, bayes.garc
 - Actions histories across all 18 public repositories returned no new failure after October 24. The extension [succeeded October 30 (UTC)](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/41092654904), and the inherited collector [skipped](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/41130962133). Updated the resource directory's dated status links; no run was triggered.
 - ARIS comparison is 11 ahead / 517 behind upstream. All seven protected skill files remain present, and the default-branch head remains `910bd752e71bc2af90841bec1f08121910bef3dd`. No upstream synchronization or skill-content edit was made. The prediction-market extension's source-manifest path remains present.
 - Retained `translate-book` pending its separate provenance review. No cleanup candidate, branch, tag, release, issue or repository was deleted or archived. A comprehensive pre-deletion review was not performed or claimed; repository administration remains outside the connector's file-editing capabilities.
+
+## Follow-up review — November 7, 2026
+
+- The public inventory remains 18 repositories. The hub and profile are public on `main`.
+- No new Actions failure was returned since October 31. The [GARCH extension](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/42262996793) succeeded November 6 at 17:35 UTC; the [inherited collector](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/42301205746) skipped at 21:59 UTC. The extension branch and manifest remain present.
+- ARIS remains at `910bd752e71bc2af90841bec1f08121910bef3dd`, 11 ahead and 532 behind upstream, with all seven protected skill files present. No synchronization was performed. `translate-book` remains retained under its separate provenance rule.
+- No repository was deleted, renamed or archived. No pre-deletion review was performed; repository administration remains outside the connector's file-editing capabilities.
