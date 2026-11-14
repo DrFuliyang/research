@@ -121,3 +121,9 @@ The owner previously deleted GARCHSigma.github.io, sigma.garch.space, bayes.garc
 - No new Actions failure was returned since October 31. The [GARCH extension](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/42262996793) succeeded November 6 at 17:35 UTC; the [inherited collector](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/42301205746) skipped at 21:59 UTC. The extension branch and manifest remain present.
 - ARIS remains at `910bd752e71bc2af90841bec1f08121910bef3dd`, 11 ahead and 532 behind upstream, with all seven protected skill files present. No synchronization was performed. `translate-book` remains retained under its separate provenance rule.
 - No repository was deleted, renamed or archived. No pre-deletion review was performed; repository administration remains outside the connector's file-editing capabilities.
+
+## Follow-up review — November 14, 2026
+
+- The public inventory remains 18 repositories, with the hub and profile on `main`. No new Actions failure was returned since November 7. The [GARCH extension](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/43477508536) succeeded November 13 (UTC); the [inherited collector](https://github.com/DrFuliyang/prediction_markets_public/actions/runs/43519671869) skipped. The extension branch and manifest remain available.
+- ARIS remains at `910bd752e71bc2af90841bec1f08121910bef3dd`, 11 ahead and 536 behind upstream, with all seven protected skill files present. No synchronization was performed. Retained `translate-book` under its separate provenance rule.
+- No repository was deleted, renamed or archived. No pre-deletion review was performed; the file-editing connection does not provide archive or delete operations.
